@@ -1,4 +1,4 @@
 .DS_Store
 *.swp
-src/style/style.css
+src/style/*.css
 node_modules
