@@ -1,4 +1,4 @@
-//  Witness 0.0.0
+//  Witness 0.0.1
 //  (c) 2012 Jake Harding
 //  Witness is freely distributable under the MIT license.
 
@@ -10,38 +10,72 @@
     };
 
     // TODO: missing keypad and branded keys
+    var CONTROL_KEYS = {
+        ENTER: 'ENTER',
+        TAB: 'TAB',
+        ESC: 'ESC',
+        BACKSPACE: 'BACKSPACE',
+        SHIFT: 'SHIFT',
+        CONTROL: 'CONTROL',
+        ALT: 'ALT',
+        CAPS_LOCK: 'CAPS_LOCK',
+        NUM_LOCK: 'NUM_LOCK',
+        LEFT_ARROW: 'LEFT_ARROW',
+        UP_ARROW: 'UP_ARROW',
+        RIGHT_ARROW: 'RIGHT_ARROW',
+        DOWN_ARROW: 'DOWN_ARROW',
+        INSERT: 'INSERT',
+        DELETE: 'DELETE',
+        HOME: 'HOME', 
+        END: 'END',
+        PAGE_UP: 'PAGE_UP',
+        PAGE_DOWN: 'PAGE_DOWN',
+        F1: 'F1',
+        F2: 'F2',
+        F3: 'F3',
+        F4: 'F4',
+        F5: 'F5',
+        F6: 'F6',
+        F7: 'F7',
+        F8: 'F8',
+        F9: 'F9',
+        F10: 'F10',
+        F11: 'F11',
+        F12: 'F12'
+    };
+
     var CONTROL_KEY_CODES = {
-        13: 'ENTER',
-        9: 'TAB',
-        27: 'ESC',
-        8: 'BACKSPACE',
-        16: 'SHIFT',
-        17: 'CONTROL',
-        18: 'ALT',
-        20: 'CAPS_LOCK',
-        144: 'NUM_LOCK',
-        37: 'LEFT_ARROW',
-        38: 'UP_ARROW',
-        39: 'RIGHT_ARROW',
-        40: 'DOWN_ARROW',
-        45: 'INSERT',
-        46: 'DELETE',
-        36: 'HOME', 
-        35: 'END',
-        33: 'PAGE_UP',
-        34: 'PAGE_DOWN',
-        112: 'F1',
-        113: 'F2',
-        114: 'F3',
-        115: 'F4',
-        116: 'F5',
-        117: 'F6',
-        118: 'F7',
-        119: 'F8',
-        120: 'F9',
-        121: 'F10',
-        122: 'F11',
-        123: 'F12'
+        13: CONTROL_KEYS.ENTER,
+        9: CONTROL_KEYS.TAB,
+        27: CONTROL_KEYS.ESC,
+        8: CONTROL_KEYS.BACKSPACE,
+        16: CONTROL_KEYS.SHIFT,
+        17: CONTROL_KEYS.CONTROL,
+        18: CONTROL_KEYS.ALT,
+        20: CONTROL_KEYS.CAPS_LOCK,
+        144: CONTROL_KEYS.NUM_LOCK,
+        37: CONTROL_KEYS.LEFT_ARROW,
+        38: CONTROL_KEYS.UP_ARROW,
+        39: CONTROL_KEYS.RIGHT_ARROW,
+        40: CONTROL_KEYS.DOWN_ARROW,
+        45: CONTROL_KEYS.INSERT,
+        46: CONTROL_KEYS.DELETE,
+        36: CONTROL_KEYS.HOME, 
+        35: CONTROL_KEYS.END,
+        33: CONTROL_KEYS.PAGE_UP,
+        34: CONTROL_KEYS.PAGE_DOWN,
+        112: CONTROL_KEYS.F1,
+        113: CONTROL_KEYS.F2,
+        114: CONTROL_KEYS.F3,
+        115: CONTROL_KEYS.F4,
+        116: CONTROL_KEYS.F5,
+        117: CONTROL_KEYS.F6,
+        118: CONTROL_KEYS.F7,
+        119: CONTROL_KEYS.F8,
+        120: CONTROL_KEYS.F9,
+        121: CONTROL_KEYS.F10,
+        122: CONTROL_KEYS.F11,
+        123: CONTROL_KEYS.F12
     };
 
     // helper method for extracting the modifier properties from
@@ -158,6 +192,9 @@
         this.addCallback = addCallback;
         this.clearCallbacks = clearCallbacks;
     };
+
+    // exposing static map of control keys
+    Witness.prototype.CONTROL_KEYS = CONTROL_KEYS;
 
     // expose Witness constructor globally
     window.Witness = Witness;
