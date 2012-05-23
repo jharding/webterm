@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../src/style/webterm.css" />
+  </head>
+  <body>
+    <div class='wt-terminal' id='webterm'>
+      <div class='wt-output'></div>
+      <div class='wt-line-command wt-line'>
+        <span class='wt-prompt'></span><span class='wt-command'></span><span class='wt-cursor'></span>
+      </div>
+    </div>
+
+    <script src='../src/vendor/underscore/underscore.js'></script>
+    <script src='../src/vendor/xevent/xevent.js'></script>
+    <script src='../src/vendor/witness/witness.js'></script>
+    <script src='../src/js/webterm.js'></script>
+
+    <script>
+      var webTerm = new WebTerm();
+      webTerm.start();
+    </script>
+  </body>
+</html>
