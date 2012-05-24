@@ -1,4 +1,4 @@
-//  Witness 0.0.1
+//  Witness 0.0.2
 //  (c) 2012 Jake Harding
 //  Witness is freely distributable under the MIT license.
 
@@ -154,10 +154,9 @@
             if (CONTROL_KEY_CODES[keyCode]) {
                 var modifiers = extractModifiers(event);
                 dispatch({
-                    isPrintable: false,
-                    isControl: true,
-                    name: CONTROL_KEY_CODES[keyCode],
-                    keyCode: keyCode,
+                    isPrintableChar: false,
+                    isControlKey: true,
+                    type: CONTROL_KEY_CODES[keyCode],
                     modifiers: modifiers
                 });
             }
@@ -171,10 +170,9 @@
            if (isPrintable(charCode)) {
                 var modifiers = extractModifiers(event);
                 dispatch({
-                    isPrintable: true,
-                    isControl: false,
+                    isPrintableChar: true,
+                    isControlKey: false,
                     char: String.fromCharCode(charCode),
-                    charCode: charCode,
                     modifiers: modifiers
                 });
            }
